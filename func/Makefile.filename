@@ -1,0 +1,27 @@
+all: dir suffix basename addsuffix addprefix
+
+dir:
+	@echo "([1;33mdir[0m <filename...>)"
+	@echo "'$(dir Makefile.filename)'"
+	@echo ""
+
+suffix:
+	@echo "([1;33msuffix[0m <filename...>)"
+	@echo "'$(suffix Makefile.filename)'"
+	@echo ""
+
+basename:
+	@echo "([1;33mbasename[0m <filename...>)"
+	@echo "'$(basename Makefile.filename)'"
+	@echo ""
+
+addsuffix:
+	@echo "([1;33maddsuffix[0m <suffix>,<filename...>)"
+	@echo "'$(addsuffix .bak, Makefile.filename)'"
+	@echo ""
+
+addprefix:
+	@echo "([1;33maddprefix[0m <prefix>,<filename...>)"
+	@echo "'$(addprefix /tmp/, Makefile.filename)'"
+	@echo ""
+

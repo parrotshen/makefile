@@ -1,0 +1,6 @@
+# strip the white space
+all:
+	@echo "([1;33mstrip[0m <string>)"
+	@echo "'$(strip			a  b    c d   )'"
+	@echo ""
+

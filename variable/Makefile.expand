@@ -1,0 +1,27 @@
+ifeq ($(SIMPLY), 1)
+
+# Simply Expanded Variables
+QUX := "qux := "
+BAR ?= "bar ?= "
+FOO := $(QUX)
+BAZ := $(FOO)
+FOO := "foo := "
+
+else
+
+# Recursively Expanded Variable
+QUX  = "qux  = "
+BAR  = "bar  = "
+FOO  = $(BAR)
+BAZ  = $(FOO)
+BAR  = $(QUX)
+
+endif
+
+all:
+	@echo "[1;35m\$$(QUX)[0m = \"$(QUX)\""
+	@echo "[1;35m\$$(FOO)[0m = \"$(FOO)\""
+	@echo "[1;35m\$$(BAR)[0m = \"$(BAR)\""
+	@echo "[1;35m\$$(BAZ)[0m = \"$(BAZ)\""
+	@echo ""
+

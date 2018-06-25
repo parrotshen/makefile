@@ -1,0 +1,8 @@
+# filter .c and .s files
+SRC = foo.c bar.c baz.s ugh.h qux.h
+
+all:
+	@echo "([1;33mfilter[0m <pattern...>,<string>)"
+	@echo "'$(filter %.c %.s, $(SRC))'"
+	@echo ""
+
