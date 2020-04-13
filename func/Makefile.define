@@ -1,0 +1,19 @@
+define assert
+    @if ! $(1); then \
+        printf "ASSERT: $(2)\n"; \
+        exit 1; \
+    fi
+endef
+
+all:
+	@echo "([1;33mcall assert[0m,<condition>,<description>)"
+	$(call assert, [ -f version.txt ], \"version.txt was not found !\")
+	@echo "version.txt ... OK"
+	@echo ""
+
+config:
+	touch version.txt
+
+clean:
+	rm -f version.txt
+

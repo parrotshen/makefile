@@ -5,6 +5,9 @@ update:
 	@touch third.c
 
 hello.c: first.c second.c third.c
+	@echo
+	@echo "hello.c: first.c second.c third.c"
+	@echo
 	@echo "[1;35m\$$@[0m = $@"
 	@echo "[1;35m\$$<[0m = $<"
 	@echo "[1;35m\$$^[0m = $^"
