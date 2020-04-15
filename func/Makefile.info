@@ -1,0 +1,12 @@
+FOO = "Hello"
+BAR = "Goodbye"
+
+
+$(info ([1;33minfo[0m <message>))
+$(info FOO = $(FOO))
+$(info BAR = $(BAR))
+
+
+all:
+	@echo
+

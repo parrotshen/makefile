@@ -18,14 +18,15 @@ DEP = $(SRC:.c=.c.d)
 
 
 all: $(BIN)
-	@echo "Build ... $(BIN)"
 	@echo
 
 $(BIN): $(OBJ)
-	$(CC) $(OBJ) -o $(BIN)
+	@echo "$(CC) $(OBJ) -o [1;33m$(BIN)[0m"
+	@$(CC) $(OBJ) -o $(BIN)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@echo "$(CC) $(CFLAGS) -c $< -o [1;33m$@[0m"
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 ifneq ($(MAKECMDGOALS), clean)
 %.c.d: %.c

@@ -1,7 +1,7 @@
 DEMO  = func
 DEMO += multi-target
 DEMO += variable
-DEMO += shell
+DEMO += ifelse
 DEMO += depend
 
 all:

@@ -1,4 +1,5 @@
-TEST  = subst
+TEST  = info
+TEST += subst
 TEST += strip
 TEST += filter
 TEST += filename
