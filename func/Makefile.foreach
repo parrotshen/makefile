@@ -1,0 +1,8 @@
+
+LIST = $(wildcard Makefile.*)
+
+all:
+	@echo "([1;33mforeach[0m <var>, <list>, <text>)"
+	@ls -l $(foreach VAR, $(LIST), $(VAR))
+	@echo
+

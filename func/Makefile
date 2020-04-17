@@ -3,6 +3,7 @@ TEST += subst
 TEST += strip
 TEST += filter
 TEST += filename
+TEST += foreach
 TEST += shell
 TEST += define
 
