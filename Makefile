@@ -3,6 +3,7 @@ DEMO += multi-target
 DEMO += variable
 DEMO += ifelse
 DEMO += depend
+DEMO += debug
 
 all:
 	@for i in $(DEMO) ; do \

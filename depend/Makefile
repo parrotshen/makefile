@@ -28,7 +28,7 @@ $(BIN): $(OBJ)
 	@echo "$(CC) $(CFLAGS) -c $< -o [1;33m$@[0m"
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-ifneq ($(MAKECMDGOALS), clean)
+ifeq ($(findstring $(MAKECMDGOALS), clean), )
 %.c.d: %.c
 	@echo "$@ \\" >  $@
 	@$(CC) -M $<  >> $@ || rm $@

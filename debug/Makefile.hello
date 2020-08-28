@@ -1,0 +1,60 @@
+CC = gcc
+CROSS = 
+APP_NAME = hello
+
+
+###############
+# Source
+###############
+
+SRC += main.c
+SRC += foo.c
+SRC += bar.c
+
+INC += -I$(HOME)/libhello/include
+
+
+###############
+# CFLAGS
+###############
+
+CFLAGS += -Wall
+CFLAGS += -Wundef
+CFLAGS += -O2
+CFLAGS += -fno-strict-aliasing
+CFLAGS += -DHELLO_WORLD=1
+CFLAGS += $(INC)
+CFLAGS += -g
+
+
+###############
+# LDFLAGS
+###############
+
+LDFLAGS += -Wall
+LDFLAGS += -L$(HOME)/libhello/lib
+LDFLAGS += -lpthread
+LDFLAGS += -lhello
+
+
+###############
+# Build
+###############
+
+OBJS = $(SRC:.c=.o)
+
+all: $(APP_NAME)
+
+$(APP_NAME): $(OBJS)
+	@echo "Link ....... $^"
+	@touch $@
+
+%.o: %.c foo.h bar.h
+	@echo "Compile .... $<"
+	@touch $@
+
+clean:
+	@echo "Delete ..... $(APP_NAME) $(OBJS)"
+	@rm -f $(APP_NAME) $(OBJS)
+
+.PHONY: clean
