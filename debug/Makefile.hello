@@ -46,15 +46,16 @@ OBJS = $(SRC:.c=.o)
 all: $(APP_NAME)
 
 $(APP_NAME): $(OBJS)
-	@echo "Link ....... $^"
+	@echo "Link: $^ -> $@"
 	@touch $@
 
 %.o: %.c foo.h bar.h
-	@echo "Compile .... $<"
+	@[ "$(STOP)" != "$<" ]
+	@echo "Compile: $< -> $@"
 	@touch $@
 
 clean:
-	@echo "Delete ..... $(APP_NAME) $(OBJS)"
+	@echo "Clean: $(APP_NAME) $(OBJS)"
 	@rm -f $(APP_NAME) $(OBJS)
 
 .PHONY: clean
