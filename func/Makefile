@@ -4,6 +4,7 @@ TEST += strip
 TEST += filter
 TEST += filename
 TEST += foreach
+TEST += condition
 TEST += shell
 TEST += define
 

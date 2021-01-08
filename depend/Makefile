@@ -39,3 +39,4 @@ endif
 clean:
 	rm -f $(BIN) $(OBJ) $(DEP)
 
+.PHONY: $(BIN)

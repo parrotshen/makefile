@@ -1,0 +1,32 @@
+# if $IF_TEST is non-empty
+#  then $IF_TRUE
+#  else $IF_FALSE
+IF_TEST = 
+IF_TRUE = "true"
+IF_FALSE = "false"
+
+# $OR_FOO is non-empty
+#  or $OR_BAR is non-empty
+#  or $OR_QUX is non-empty
+OR_FOO = "foo"
+OR_BAR = "bar"
+OR_QUX = "qux"
+
+# $AND_FOO is non-empty
+#  and $AND_BAR is non-empty
+#  and $AND_QUX is non-empty
+AND_FOO = "foo"
+AND_BAR = "bar"
+AND_QUX = "qux"
+
+all:
+	@echo "([1;33mif[0m <condition>,<then-part>,<else-part>)"
+	@echo "'$(if $(IF_TEST),$(IF_TRUE),$(IF_FALSE))'"
+	@echo ""
+	@echo "([1;33mor[0m <condition1>,<condition2>,<...>)"
+	@echo "'$(or $(OR_FOO),$(OR_BAR),$(OR_QUX))'"
+	@echo ""
+	@echo "([1;33mand[0m <condition1>,<condition2>,<...>)"
+	@echo "'$(and $(AND_FOO),$(AND_BAR),$(AND_QUX))'"
+	@echo ""
+
