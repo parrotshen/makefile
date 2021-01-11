@@ -1,0 +1,14 @@
+CC = gcc
+
+
+all: foo.o bar.o qux.o
+
+%.o: %.c
+#   Make stop while the shell command failed (return a non-zero value)
+	@[ "$(STOP)" != "$<" ]
+	@echo "$(CC) -Wall -c $<"
+
+clean:
+
+
+.PHONY: clean

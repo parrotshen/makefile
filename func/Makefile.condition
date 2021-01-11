@@ -8,9 +8,9 @@ IF_FALSE = "false"
 # $OR_FOO is non-empty
 #  or $OR_BAR is non-empty
 #  or $OR_QUX is non-empty
-OR_FOO = "foo"
-OR_BAR = "bar"
-OR_QUX = "qux"
+OR_FOO = 
+OR_BAR = 
+OR_QUX = 
 
 # $AND_FOO is non-empty
 #  and $AND_BAR is non-empty

@@ -50,7 +50,6 @@ $(APP_NAME): $(OBJS)
 	@touch $@
 
 %.o: %.c foo.h bar.h
-	@[ "$(STOP)" != "$<" ]
 	@echo "Compile: $< -> $@"
 	@touch $@
 
