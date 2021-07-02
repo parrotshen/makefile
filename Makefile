@@ -1,4 +1,5 @@
 DEMO  = func
+DEMO += implicit
 DEMO += multi-target
 DEMO += variable
 DEMO += ifelse

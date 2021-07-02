@@ -14,8 +14,8 @@ all: clean
 	-make -f Makefile.error
 	@echo
 #   Force make to stop
-	@echo "[1;32mMake procedure stop at 'qux.c':[0m"
-	-make -s -f Makefile.stop STOP=qux.c
+	@echo "[1;32mMake procedure stop at 'bar.c':[0m"
+	-make -s -f Makefile.stop STOP=bar.c
 	@echo
 
 clean:

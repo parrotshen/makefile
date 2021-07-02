@@ -6,7 +6,7 @@ TEST += filename
 TEST += foreach
 TEST += condition
 TEST += shell
-TEST += define
+TEST += call
 
 all:
 	@for i in $(TEST) ; do \

@@ -2,6 +2,7 @@ all:
 	@echo "[1;35m\$$(MAKE_VERSION)[0m = $(MAKE_VERSION)"
 	@echo "[1;35m\$$(MAKECMDGOALS)[0m = $(MAKECMDGOALS)"
 	@echo "[1;35m\$$(MAKELEVEL)[0m = $(MAKELEVEL)"
+	@echo "[1;35m\$$(MAKEFILE_LIST)[0m = $(MAKEFILE_LIST)"
 	@echo "[1;35m\$$(CURDIR)[0m = $(CURDIR)"
 	@echo "[1;35m\$$(CC)[0m = $(CC)"
 	@echo "[1;35m\$$(LD)[0m = $(LD)"
