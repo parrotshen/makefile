@@ -1,9 +1,9 @@
-DEMO  = func
-DEMO += implicit
+DEMO  = implicit
 DEMO += multi-target
+DEMO += depend
 DEMO += variable
 DEMO += ifelse
-DEMO += depend
+DEMO += func
 DEMO += debug
 
 all:

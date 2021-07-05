@@ -1,12 +1,12 @@
 CC = gcc
 
 
+# Make stop while the shell command failed (return a non-zero value)
 all: foo.o bar.o qux.o
-
-%.o: %.c
-#   Make stop while the shell command failed (return a non-zero value)
-	@[ "$(STOP)" != "$<" ]
-	@echo "$(CC) -Wall -c $<"
+	@echo "$(CC) -Wall -c foo.c"
+	@echo "$(CC) -Wall -c bar.c"
+	@false
+	@echo "$(CC) -Wall -c qux.c"
 
 clean:
 

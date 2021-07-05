@@ -1,6 +1,6 @@
 CC = gcc
 CROSS = 
-APP_NAME = hello
+APP_NAME = example
 
 
 ###############
@@ -11,7 +11,7 @@ SRC += main.c
 SRC += foo.c
 SRC += bar.c
 
-INC += -I$(HOME)/libhello/include
+INC += -I$(HOME)/libdemo/include
 
 
 ###############
@@ -32,9 +32,9 @@ CFLAGS += -g
 ###############
 
 LDFLAGS += -Wall
-LDFLAGS += -L$(HOME)/libhello/lib
+LDFLAGS += -L$(HOME)/libdemo/lib
 LDFLAGS += -lpthread
-LDFLAGS += -lhello
+LDFLAGS += -ldemo
 
 
 ###############
