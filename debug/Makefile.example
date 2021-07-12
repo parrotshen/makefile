@@ -10,8 +10,9 @@ APP_NAME = example
 SRC += main.c
 SRC += foo.c
 SRC += bar.c
+SRC += qux.c
 
-INC += -I$(HOME)/libdemo/include
+INC += -I$(HOME)/libhello/include
 
 
 ###############
@@ -32,9 +33,9 @@ CFLAGS += -g
 ###############
 
 LDFLAGS += -Wall
-LDFLAGS += -L$(HOME)/libdemo/lib
+LDFLAGS += -L$(HOME)/libhello/lib
 LDFLAGS += -lpthread
-LDFLAGS += -ldemo
+LDFLAGS += -lhello
 
 
 ###############
@@ -49,7 +50,7 @@ $(APP_NAME): $(OBJS)
 	@echo "Link: $^ -> $@"
 	@touch $@
 
-%.o: %.c foo.h bar.h
+%.o: %.c foo.h bar.h qux.h
 	@echo "Compile: $< -> $@"
 	@touch $@
 
