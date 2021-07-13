@@ -1,5 +1,4 @@
-CC = gcc
-CROSS = 
+CC = $(CROSS)gcc
 APP_NAME = example
 
 

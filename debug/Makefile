@@ -3,6 +3,8 @@ all: clean
 	@echo "[1;32mDisplay makefile variables:[0m"
 	make -s -f check.mk check -f Makefile.example
 	@echo
+	make -s -f check.mk INC -f Makefile.example
+	@echo
 	make -s -f check.mk SRC -f Makefile.example
 	@echo
 	@echo "[1;32mError if gcc command not found:[0m"
@@ -10,7 +12,7 @@ all: clean
 	@echo
 #   Just print the command
 	@echo "[1;32mJust print makefile commands:[0m"
-	make -s -n -w -f Makefile.example
+	make -n -w -f Makefile.example
 	@echo
 #   No rule to make target 'test.c'
 	@echo "[1;32mNo rule to make target 'test.c':[0m"
