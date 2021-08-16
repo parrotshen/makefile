@@ -4,14 +4,18 @@ SRC += alpha.c
 SRC += beta.c
 SRC += gamma.c
 
-OBJ_1 = $(SRC:.c=.o)
-OBJ_2 = $(addprefix $(DIR)/, $(SRC:.c=.o))
+OBJ_1  = $(SRC:.c=.o)
+OBJ_2  = $(addprefix $(DIR)/, $(SRC:.c=.o))
+BACKUP = $(addsuffix .bak, $(SRC))
 
 all:
 	@echo "[1;35mChange *.c to *.o:[0m"
 	@echo "  $(OBJ_1)"
-	@echo ""
+	@echo
 	@echo "[1;35mAdd directory as prefix:[0m"
 	@echo "  $(OBJ_2)"
-	@echo ""
+	@echo
+	@echo "[1;35mAdd .bak as suffix:[0m"
+	@echo "  $(BACKUP)"
+	@echo
 
