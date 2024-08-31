@@ -1,6 +1,6 @@
 # execute shell command: ls -a
 all:
 	@echo "([1;33mshell[0m <command...>)"
-	@echo "'$(shell ls -a)'"
+	@echo "'$(shell pwd)'"
 	@echo ""
 

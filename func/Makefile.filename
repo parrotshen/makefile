@@ -1,4 +1,4 @@
-all: dir suffix basename addsuffix addprefix
+all: dir suffix basename addsuffix addprefix wildcard
 
 dir:
 	@echo "([1;33mdir[0m <filename...>)"
@@ -23,5 +23,10 @@ addsuffix:
 addprefix:
 	@echo "([1;33maddprefix[0m <prefix>,<filename...>)"
 	@echo "'$(addprefix /tmp/, Makefile.filename)'"
+	@echo ""
+
+wildcard:
+	@echo "([1;33mwildcard[0m <filename...>)"
+	@echo "'$(wildcard Makefile.*)'"
 	@echo ""
 

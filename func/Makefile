@@ -14,5 +14,5 @@ all:
     done
 
 config clean:
-	@make -sf Makefile.define $@
+	@make -sf Makefile.call $@
 
