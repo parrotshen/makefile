@@ -1,5 +1,5 @@
 MODULE_NAME = my_example
-KERNEL_DIR = /usr/src/kernels/$(shell uname -r)
+KERNEL_DIR = /lib/modules/$(shell uname -r)/build
 BUILD_DIR = $(shell pwd)
 ARCH = x86
 CROSS =
