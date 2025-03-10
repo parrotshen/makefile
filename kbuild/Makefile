@@ -23,6 +23,12 @@ EXTRA_CFLAGS += -O2
 #  Build
 ###########
 
+# for kernel version >= 6.8.0
+#KBUILD_CFLAGS := $(filter-out -Wmissing-prototypes -Wmissing-declarations, $(KBUILD_CFLAGS))
+
+# for external symbols
+#KBUILD_EXTRA_SYMBOLS := path_to_module/Module.symvers
+
 ifneq ($(KERNELRELEASE),)
 
 OBJS  := $(SRC:.c=.o)
