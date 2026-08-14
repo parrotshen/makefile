@@ -10,5 +10,11 @@ all:
 
 clean:
 
+success:
+	- @ls -l main.c && echo "(success return 0)"
+
+failure:
+	- @ls -l hello.c || echo "(failure return 1)"
+
 
 .PHONY: clean
