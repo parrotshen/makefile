@@ -1,0 +1,14 @@
+
+all:
+	@echo "([1;33mwildcard[0m <filename>)"
+ifneq ($(wildcard ./Makefile.wildcard),)
+	@echo "./Makefile.wildcard exists"
+else
+	@echo "./Makefile.wildcard doesn't exist"
+endif
+ifneq ($(wildcard /tmp/Makefile.wildcard),)
+	@echo "/tmp/Makefile.wildcard exists"
+else
+	@echo "/tmp/Makefile.wildcard doesn't exist"
+endif
+	@echo
